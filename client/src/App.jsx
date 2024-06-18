@@ -7,6 +7,7 @@ import Signup from './PAGES/Signup'
 import Dashboard from './PAGES/Dashboard'
 import Projects from './PAGES/Projects'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
 
 
       </Routes>
+    <Footer/>
     </BrowserRouter>
   )
 }
