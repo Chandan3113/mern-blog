@@ -6,10 +6,12 @@ import Signin from './PAGES/Signin'
 import Signup from './PAGES/Signup'
 import Dashboard from './PAGES/Dashboard'
 import Projects from './PAGES/Projects'
+import Header from './components/Header'
 
 const App = () => {
   return (
     <BrowserRouter>
+    <Header/>
       <Routes>
         <Route path='/' element={Home}/>
         <Route path='/about' element={About}/>
