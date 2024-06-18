@@ -1,5 +1,6 @@
 const express=require('express')
 const mongoose=require('mongoose')
+const userRoutes=require('./routes/user.route.js')
 require("dotenv").config()
 mongoose.connect(process.env.DATABASE_URL).then(()=>{
     console.log('mongo db is connected')
@@ -11,3 +12,6 @@ const app=express();
 app.listen(3000,()=>{
     console.log('server is running at 3000 !!')
 })
+
+app.use('/api/user',userRoutes);
+
