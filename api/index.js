@@ -8,19 +8,20 @@ import postRoutes from './routes/post.route.js'
 import commetRoutes from './routes/comment.route.js'
 import path from 'path'
 
-
-const app=express();
-app.use(express.json())
-app.use(cookieParser());
 dotenv.config()
-
 
 mongoose.connect(process.env.DATABASE_URL).then(()=>{
     console.log('MONGO DB IS CONNECTED')
 }).catch(error=>{
     console.log(error)
 })
+
 const __dirname=path.resolve();
+
+const app=express();
+
+app.use(express.json())
+app.use(cookieParser());
 
 
 app.listen(3000,()=>{
