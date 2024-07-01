@@ -8,7 +8,7 @@ import postRoutes from './routes/post.route.js'
 import commetRoutes from './routes/comment.route.js'
 import path from 'path'
 
-const __dirname=path.resolve();
+
 const app=express();
 app.use(express.json())
 app.use(cookieParser());
@@ -20,6 +20,7 @@ mongoose.connect(process.env.DATABASE_URL).then(()=>{
 }).catch(error=>{
     console.log(error)
 })
+const __dirname=path.resolve();
 
 
 app.listen(3000,()=>{
